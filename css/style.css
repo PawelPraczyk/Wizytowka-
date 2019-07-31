@@ -25,22 +25,11 @@ header {
     min-height: 100vh;
     opacity: 0.75;
     position: relative;
-    background-image: url(../img/cover_photo.png);
+    background-image: url(../img/apple-business-camera-equipment-2120021.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Oswald', sans-serif;
 }
-
-
-.welcome {
-    width: 100%;
-    height: 30%;
-    background-color: #ECECEC;
-    opacity: 0.85;
-    position : absolute;
-    
-}
-
 
 .headers {
     width: 80vw;
@@ -55,6 +44,15 @@ header {
 
 .welcome h2 {
     font-size: 2rem;
+}
+
+.welcome {
+    width: 100%;
+    height: 30%;
+    background-color: #ECECEC;
+    opacity: 0.85;
+    position: absolute;
+
 }
 
 .profile {
@@ -82,31 +80,63 @@ header {
 
 main {
     display: block;
+    background-image: url(../img/nav.jpg);
+    background-size: contain;
+}
+
+.between-sec {
+    height: 10vh;
+    background-image: url(../img/nav.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E6E8E9;
+    font-size: 3rem;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
 }
 
 .about-me {
-    min-height: 50vh;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #63595A;
+    opacity: 0.9;
+    border-radius: 10vh;
+    border: 1vh solid rgb(68, 61, 62);
 }
 
 .description {
+    color: #63595A;
+    text-align: center;
     margin: 8% 5%;
-    width: 90%;
+    width: 80%;
     min-height: 60%;
     padding: 5%;
     background-color: #E6E8E9;
-    border-radius: 5%;
+    border-radius: 5vh;
 }
+
+
+/*   Skills section  */
 
 .skills {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     min-height: 50vh;
     background-color: #63595A;
     padding: 5% 10% 0% 10%;
+    opacity: 0.9;
+    border-radius: 10vh;
+    border: 1vh solid rgb(68, 61, 62);
+    font-family: 'Farro', sans-serif;
+    font-weight: 500;
+    color: rgb(87, 84, 84);
 }
 
 .skill {
@@ -117,11 +147,46 @@ main {
 }
 
 
+
 .border-line {
+    position: relative;
     width: 80%;
     height: 5%;
     background-color: rgb(155, 155, 155);
+    border-radius: 1vh;
 }
+
+.fill {
+    position: absolute;
+    height: 100%;
+    background-color: rgb(87, 84, 84);
+    border-radius: 1vh;
+}
+
+.fill1 {
+    width: 70%;
+}
+
+.fill2 {
+    width: 90%;
+}
+
+.fill3 {
+    width: 90%;
+}
+
+.fill4 {
+    width: 80%;
+}
+
+.fill5 {
+    width: 65%;
+}
+
+.fill6 {
+    width: 60%;
+}
+
 
 .skills .soft {
     background-color: #E6E8E9;
@@ -131,13 +196,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 5%;
+    border-radius: 5vh;
 }
 
-.title {
-    font-size: 1.5rem;
-    text-align: center;
-}
 
 .skills h3 {
     margin: 1%;
@@ -150,25 +211,12 @@ main {
     background-color: #E6E8E9;
     width: 100%;
     height: 80%;
-    border-radius: 5%;
+    border-radius: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-
-
-.contact {
-    min-height: 50vh;
-    background-color: #63595A;
-}
-
-footer {
-    min-height: 12.5vh;
-    background-color: #E6E8E9;
-}
-
 
 /*   Portfolio things  */
 
@@ -178,16 +226,87 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: space-around;
+    opacity: 0.9;
+    border-radius: 10vh;
+    border: 1vh solid rgb(153, 155, 156);
+    text-align: center;
 }
 
 .project {
     min-height: 40vh;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proj {
     background-color: #63595A;
+    width: 80%;
+    height: 80%;
+    border-radius: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.photo {
+    width: 90%;
+    height: 75%;
+    background-color: rgb(136, 77, 83);
 }
 
 
+/* Contact section */
+
+.contact {
+    min-height: 50vh;
+    background-color: #63595A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    border-radius: 10vh;
+    border: 1vh solid rgb(68, 61, 62);
+}
+
+.container {
+    width: 80%;
+    min-height: 70%;
+    background-color: #E6E8E9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 5vh;
+    padding: 5%;
+}
+
+.contact-icon {
+    width: 15vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    color: #63595A;
+    text-decoration: none;
+}
+
+.contact-icon a {
+    text-decoration: none;
+    color: #63595A;
+}
+
+/*   Footer section  */
+
+footer {
+    min-height: 6.25vh;
+    background-color: #E6E8E9;
+    text-align: center;
+    padding-top: 2vh;
+}
 
 /*   Media  */
 
@@ -197,8 +316,13 @@ footer {
         padding-top: 30%;
     }
 
+    .skills {
+        justify-content: center;
+    }
+
     .skill {
         min-height: 60vh;
+        width: 80%;
     }
 
     .skills .soft {
@@ -207,6 +331,12 @@ footer {
 
     .skills .hard {
         height: 90%;
+    }
+    .between-sec {
+        height: 15vh;
+    }
+    .project {
+        width: 40%;
     }
 
 }
@@ -230,4 +360,43 @@ footer {
     }
 }
 
+@media (min-width: 1024px) {
+    .about-me, .skills, .portfolio, .contact {
+        margin-left: 5%;
+        width: 90%;
+    }
 
+    .welcome {
+        width: 60%;
+        height: 100%;
+    }
+
+    .profile {
+        width: 40%;
+        height: 100%;
+        left: 60%;
+        top: 0%;
+    }
+
+    .profile-photo {
+        width: 70%;
+        height: auto;
+        padding-top: 70%;
+    }
+
+    .skills {
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .skill {
+        min-height: 60vh;
+        width: 45%;
+    }
+    .skills .soft , .skills .hard {
+        min-height: 100%;
+        justify-content: space-around;
+    }   
+
+
+}
