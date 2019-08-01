@@ -12,14 +12,39 @@
             href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Dancing+Script:400,700|Indie+Flower|Shadows+Into+Light&display=swap"
             rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+
+        <script>
+            jQuery(function($){
+                $.scrollTo(0);
+                $('#link1').click(function() { $.scrollTo($('#header'), 1000); });
+                $('#link2').click(function() { $.scrollTo($('#about'), 1000); });
+                $('#link3').click(function() { $.scrollTo($('#skills'), 1000); });
+                $('#link4').click(function() { $.scrollTo($('#portfolio'), 1000); });
+                $('#link5').click(function() { $.scrollTo($('#contact'), 1000); });
+            }
+            );
+        </script>
     </head>
 
     <body>
         <nav>
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <div class="mobile-bar">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <div class="nav-bar">
+                <ul class="nav_links">
+                    <li class="logo"><a id="link1" href="#">Paweł Praczyk</a></li>
+                    <li><a id="link2" href="#">About</a></li>
+                    <li><a id="link3" href="#">Skills</a></li>
+                    <li><a id="link4" href="#">Portfolio</a></li>
+                    <li><a id="link5" href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         
-        <header>
+        <header id="header">
             <div class="welcome">
                 <div class="headers">
                     <h1>Hi there</h1>
@@ -32,20 +57,21 @@
             
         </header>
         <main>
-            <section class="between-1 between-sec">
+            <section></section>
+            <section class="between-1 between-sec" id="about">
                 <h1>About me</h1>
             </section>
-            <section class="about-me" id="about">
+            <section class="about-me" >
                 <div class="description">
                     Vestibulum ut eros sagittis,
                     semper risus feugiat, consectetur quam. Morbi et tellus vel ligula bibendum maximus vel vel dolor. Pellentesque
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet diam tellus. Etiam pellentesque venenatis
                 </div>
             </section>
-            <section class="between-sec">
+            <section class="between-sec" id="skills">
                 <h1>Skills</h1>
             </section>
-            <section class="skills" id="skills">
+            <section class="skills" >
                 <div class="skill">
                     <div class="soft">
                         <h2>Soft ones</h2>
@@ -95,10 +121,10 @@
                 
                 
             </section>
-            <section class="between-sec">
+            <section class="between-sec" id="portfolio">
                 <h1>Portfolio</h1>
             </section>
-            <section class="portfolio" id="portfolio">
+            <section class="portfolio" >
                 <div class="project">
                    <div class="proj proj-rsa">
                        <div class="photo">
@@ -132,10 +158,10 @@
                     </div>
                 </div>
             </section>
-            <section class="between-sec">
+            <section class="between-sec" id="contact">
                 <h1>Contact</h1>
             </section>
-            <section class="contact" class="contact">
+            <section class="contact" >
                 <div class="container">
                     <div class="contact-icon">
                         <i class="fa fa-phone-square"></i>
