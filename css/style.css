@@ -16,7 +16,7 @@ nav {
     font-family: 'Amatic SC', cursive;
     position: fixed;
     z-index: 100;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .nav-bar {
@@ -30,11 +30,44 @@ nav {
 }
 
 .mobile-bar {
-    color: #4F4343;
+    color: rgb(100, 13, 13);
     position: absolute;
     right: 20px;
     font-size: 8rem;
 }
+
+
+#toggle {
+    display: none;
+}
+
+.nav-mobile {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5rem;
+}
+
+
+.nav-mobile li {
+    padding: 2%;
+}
+
+.nav-background {
+    width: 100%;
+    background-color: rgb(153, 155, 156);
+    position: fixed;
+    
+    z-index: 4;
+    display: none;
+}
+
+#toggle:checked ~ .nav-background {
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
 
 .nav_links {
     list-style: none;
@@ -121,6 +154,7 @@ header {
     background-size: cover;
     position: absolute;
     border: 5px solid rgb(68, 57, 57);
+    animation: photo-flip 3s ease-in-out;
 }
 
 main {
@@ -175,7 +209,7 @@ main {
     flex-wrap: wrap;
     min-height: 50vh;
     background-color: #63595A;
-    padding: 5% 10% 0% 10%;
+    padding: 5% 10% 5% 10%;
     opacity: 0.9;
     border-radius: 10vh;
     border: 1vh solid rgb(68, 61, 62);
@@ -189,6 +223,7 @@ main {
     min-height: 30vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -295,14 +330,23 @@ main {
     justify-content: center;
     align-items: center;
     padding: 5%;
+    color: #E6E8E9;
 }
 
 .photo {
     width: 90%;
     height: 75%;
-    background-color: rgb(136, 77, 83);
+    border: 1vh solid rgb(68, 61, 62);
 }
 
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.photo a {
+    margin: 0%;
+}
 
 /* Contact section */
 
@@ -383,7 +427,18 @@ footer {
     .project {
         width: 40%;
     }
+    .nav-mobile {
+        font-size: 3rem;
+    }
+    .nav-mobile li {
+        padding: 1%;
+    }
 
+}
+
+@media (orientation: portrait){
+    .border-line {
+    }
 }
 
 @media (max-width: 320px) {
@@ -411,8 +466,21 @@ footer {
         width: 90%;
     }
 
+    .headers h1 {
+        font-size: 8rem;
+    }
+
+    .headers h2 {
+        font-size: 3rem;
+    }
+
+    .headers h2 span::after{
+        content: '\A';    
+        white-space: pre;
+    }
+
     .welcome {
-        width: 60%;
+        width: 60%; 
         height: 100%;
     }
 
@@ -435,13 +503,24 @@ footer {
     }
 
     .skill {
-        min-height: 60vh;
+        min-height: 50vh;
         width: 45%;
     }
+
+    .skill h3 {
+        font-size: 1.5rem;
+    }
+
     .skills .soft , .skills .hard {
         min-height: 100%;
         justify-content: space-around;
+        padding-bottom: 5%;
     }   
+
+    .skills h2 {
+        margin-bottom: 2%;
+        font-size: 1.8rem;
+    }
 
     .mobile-bar {
         display: none;
@@ -453,10 +532,67 @@ footer {
 
 }
 
+@media (min-width: 1324px) {
+    .headers h1 {
+        font-size: 10rem;
+    }
+
+    .headers h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1624px) {
+    .headers h1 {
+        font-size: 12rem;
+    }
+
+    .headers h2 {
+        font-size: 5rem;
+    }
+}
+
 @media (min-width: 375px) and (max-width: 700px) {
     
     .mobile-bar {
         font-size: 4rem;
     }
 
+}
+
+@media (min-width: 1024px) and (min-height: 700px){
+    .skill {
+        min-height: 40vh;
+    }
+}
+
+
+@media (min-height: 550px) and (min-width: 330px) and (max-width: 680px){
+    .skill{
+        min-height: 50vh;
+    }
+}
+
+@keyframes photo-flip {
+    0% {
+        width: 5%;
+        padding-top: 5%;
+        height: auto;
+    } 25% {
+        width: 20%;
+        padding-top: 20%;
+        height: auto;
+    } 50% {
+        width: 35%;
+        padding-top: 35%;
+        height: auto;
+    } 75% {
+        width: 50%;
+        padding-top: 50%;
+        height: auto;
+    } 100% {
+        width: 70%;
+        padding-top: 70%;
+        height: auto;
+    }
 }

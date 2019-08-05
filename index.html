@@ -26,13 +26,26 @@
             }
             );
         </script>
+
+        
+
     </head>
 
     <body>
         <nav>
-            <div class="mobile-bar">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+            <label class="mobile-bar" for="toggle">&#9776;</label>
+            <input  type="checkbox" id="toggle" />
+            <div class="nav-background">
+                <ul class="nav-mobile">
+                    <label class="mobile-bar" for="toggle">&#9776;</label>
+                    <li><a id="link1" href="#">Main</a></li>
+                    <li><a id="link2" href="#">About</a></li>
+                    <li><a id="link3" href="#">Skills</a></li>
+                    <li><a id="link4" href="#">Portfolio</a></li>
+                    <li><a id="link5" href="#">Contact</a></li>
+                </ul>
             </div>
+            
             <div class="nav-bar">
                 <ul class="nav_links">
                     <li class="logo"><a id="link1" href="#">Paweł Praczyk</a></li>
@@ -48,7 +61,7 @@
             <div class="welcome">
                 <div class="headers">
                     <h1>Hi there</h1>
-                    <h2>My name is Paweł and I want to introduce you into my world :)</h2>
+                    <h2><span>My name is Paweł and I want to introduce you</span>into my world :)</h2>
                 </div>
             </div>
             <div class="profile">
@@ -126,17 +139,21 @@
             </section>
             <section class="portfolio" >
                 <div class="project">
-                   <div class="proj proj-rsa">
-                       <div class="photo">
-
-                       </div>
+                   <div class="proj">
+                        <div class="photo proj-rsa">
+                            <a href="https://github.com/PawelPraczyk/RSA-Encryption" target="_blank">
+                                <img src="img/HO-RSA.png">
+                            </a>
+                        </div>
                        <h3>C++ RSA</h3>
                    </div>
                 </div>
                 <div class="project">
                     <div class="proj proj-budget">
                         <div class="photo">
-                        
+                            <a href="https://github.com/PawelPraczyk/RSA-Encryption" target="_blank">
+                                <img src="img/HO-RSA.png">
+                            </a>
                         </div>
                         <h3>C# .NET MVC 5 HomeBudget</h3>
                     </div>
@@ -144,7 +161,9 @@
                 <div class="project">
                     <div class="proj proj-api">
                         <div class="photo">
-                        
+                            <a href="https://github.com/PawelPraczyk/RSA-Encryption" target="_blank">
+                                <img src="img/HO-RSA.png">
+                            </a>
                         </div>
                         <h3>C# FitRemainder Api .NET Core(in progress)</h3>
                     </div>
@@ -152,7 +171,9 @@
                 <div class="project">
                     <div class="proj proj-spd">
                         <div class="photo">
-                        
+                            <a href="https://github.com/PawelPraczyk/RSA-Encryption" target="_blank">
+                                <img src="img/HO-RSA.png">
+                            </a>
                         </div>
                         <h3>SPD 6 projects in C++</h3>
                     </div>
