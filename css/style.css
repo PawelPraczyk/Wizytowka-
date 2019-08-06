@@ -29,8 +29,9 @@ nav {
     border: 1vh solid rgb(153, 155, 156);
 }
 
+
 .mobile-bar {
-    color: rgb(100, 13, 13);
+    color: rgb(27, 9, 9);
     position: absolute;
     right: 20px;
     font-size: 8rem;
@@ -58,8 +59,6 @@ nav {
     width: 100%;
     background-color: rgb(153, 155, 156);
     position: fixed;
-    
-    z-index: 4;
     display: none;
 }
 
@@ -90,15 +89,18 @@ a, li {
     background-color: rgb(68, 61, 62);
     color: #ECECEC;
     width: 40%;
-    margin: 0%;
     height: 100%;
+    margin: 0%;
     text-align: center;
-}
-.logo a {
-    color: #ECECEC;
-    
+    position: relative;
 }
 
+.logo a {
+    color: #ECECEC;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
 header {
     min-height: 100vh;
     opacity: 0.75;
@@ -154,7 +156,6 @@ header {
     background-size: cover;
     position: absolute;
     border: 5px solid rgb(68, 57, 57);
-    animation: photo-flip 3s ease-in-out;
 }
 
 main {
@@ -187,6 +188,8 @@ main {
     opacity: 0.9;
     border-radius: 10vh;
     border: 1vh solid rgb(68, 61, 62);
+    font-family: 'Oswald',
+    sans-serif;
 }
 
 .description {
@@ -216,6 +219,8 @@ main {
     font-family: 'Farro', sans-serif;
     font-weight: 500;
     color: rgb(87, 84, 84);
+    font-family: 'Oswald',
+    sans-serif;
 }
 
 .skill {
@@ -331,6 +336,7 @@ main {
     align-items: center;
     padding: 5%;
     color: #E6E8E9;
+    font-family: 'Oswald', sans-serif;
 }
 
 .photo {
@@ -530,6 +536,15 @@ footer {
         display: block;
     }
 
+    .contact-icon {
+        font-size: 9rem; 
+        
+    }
+    
+    .contact-icon:hover i {
+        animation: icon-rotate 1.5s ease-in-out;
+    }
+
 }
 
 @media (min-width: 1324px) {
@@ -540,6 +555,9 @@ footer {
     .headers h2 {
         font-size: 4rem;
     }
+    .contact-icon {
+        font-size: 11rem;
+    }
 }
 
 @media (min-width: 1624px) {
@@ -549,6 +567,14 @@ footer {
 
     .headers h2 {
         font-size: 5rem;
+    }
+    .contact-icon {
+        width: 20vh;
+        height: 20vh;
+        font-size: 13rem;
+    }
+    .container {
+        padding: 3% 5%;
     }
 }
 
@@ -573,26 +599,34 @@ footer {
     }
 }
 
-@keyframes photo-flip {
-    0% {
-        width: 5%;
-        padding-top: 5%;
-        height: auto;
-    } 25% {
-        width: 20%;
-        padding-top: 20%;
-        height: auto;
-    } 50% {
-        width: 35%;
-        padding-top: 35%;
-        height: auto;
-    } 75% {
-        width: 50%;
-        padding-top: 50%;
-        height: auto;
-    } 100% {
-        width: 70%;
-        padding-top: 70%;
-        height: auto;
+@media (max-height: 500px) and (min-width: 300px) {
+    .project {
+        min-height: 60vh;
     }
+}
+
+@media (min-height: 500px) and (max-height: 650px) and (min-width: 300px) {
+    .project {
+        min-height: 50vh;
+    }
+}
+
+@media (min-height: 560px) and (min-width: 760px)  {
+    .proj h3{
+        font-size: 2rem;
+    }
+}
+
+
+@keyframes icon-rotate {
+    0% {
+        transform: rotateZ(0deg);
+    } 25% {
+        transform: rotateZ(-30deg);
+    }  75% {
+        transform: rotateZ(30deg);
+    } 100% {
+        transform: rotateZ(0deg);
+    }
+
 }
